@@ -25,7 +25,7 @@ Here bugs and normals denote the positions of buggy and non-buggy condition expr
 1. `python prepare.py 0` 
 2. `cd spoon/`
 3. `mvn compile`
-4. `mvn exec:java -Dexec.mainClass="fr.inria.controlflow.Main" -Dexec.args="../data/dataset_final.csv ../data/dataset_final.csv"`
+4. `mvn exec:java -Dexec.mainClass="fr.inria.controlflow.Main" -Dexec.args="../data/dataset.csv ../data/dataset_final.csv"`
 5. `python prepare.py 1`
 6. `cd CFGNNN/`
 7. `python preprocess.py train valid test`
