@@ -45,11 +45,11 @@ def remove():
             data.append(non_buggy.sample(n=1))
     data = pd.concat(data)
 
-    data.to_csv('data/dataset_final.csv', index=False)
+    data.to_csv('data/dataset_clean.csv', index=False)
 
 
 def split():
-    csv_data = pd.read_csv('data/dataset_final.csv', chunksize=1000)
+    csv_data = pd.read_csv('data/dataset_clean.csv', chunksize=1000)
     chunks = []
     for n, chunk in enumerate(csv_data):
         print(n)
