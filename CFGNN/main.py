@@ -10,9 +10,6 @@ from sklearn.metrics import precision_recall_fscore_support
 import warnings
 
 warnings.simplefilter("ignore")
-# print(torch.initial_seed())
-# torch.manual_seed(2526825268747341238)
-
 
 def train(opt, train_iter, valid_iter, device):
     net = model.CFGNN(opt).to(device)
@@ -71,12 +68,7 @@ def train(opt, train_iter, valid_iter, device):
 
         os.makedirs('checkpoints/', exist_ok=True)
         torch.save(net, 'checkpoints/epoch-%d.pt' % i)
-        # net = torch.load('checkpoints/epoch-%d.pt' % i)
-        # pred = net(x[0], m, x[1], x[2], batch.type)
-        # print(pred[:3])
-        # print(y_pred)
-    #     fw.write(str(y_pred))
-    #     fw.write('\n')
+
     # fw.close()
     return net
 
