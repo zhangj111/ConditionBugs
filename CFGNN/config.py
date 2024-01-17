@@ -9,7 +9,7 @@ def parse():
                         help='Input batch size for training')
     parser.add_argument('--hidden_dim', type=int, default=128,
                         help='Dimension of hidden states')
-    parser.add_argument('--max_node', type=int, default=150,
+    parser.add_argument('--max_node', type=int, default=300,
                         help='Maximum number of nodes')
     parser.add_argument('--max_token', type=int, default=20,
                         help='Maximum number of tokens')
